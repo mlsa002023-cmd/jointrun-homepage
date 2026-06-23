@@ -1,7 +1,7 @@
 const PRE_APPLY_EMAIL = "mlsa002023@gmail.com";
 const NAVER_BAND_URL = "https://band.us/@jointrun";
 const GOOGLE_SURVEY_URL =
-  "https://script.google.com/macros/s/AKfycbw9Ncz34rj4LRKLGqjw_C0jJ0ppf4DAlQe8BZUBipE/dev";
+  "https://docs.google.com/forms/d/e/1FAIpQLSfnoCrl9vTUzSfNslEB7y1ub3MLIswrnD7-mBvTb5ZGPE6ZaA/viewform";
 
 const bandLink = document.querySelector("#bandLink");
 bandLink.href = NAVER_BAND_URL;
