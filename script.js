@@ -44,3 +44,17 @@ document.querySelector("#applyForm").addEventListener("submit", (event) => {
   document.querySelector("#formNote").textContent =
     "메일 앱이 열리지 않으면 mlsa002023@gmail.com 로 이름과 연락처를 보내주세요.";
 });
+
+const revealTargets = document.querySelectorAll(".reveal");
+const revealObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("in-view");
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.15 },
+);
+revealTargets.forEach((target) => revealObserver.observe(target));
