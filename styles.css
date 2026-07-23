@@ -1,17 +1,19 @@
+/* RC1 디자인 통합 — Claude Design 토큰(design-tokens.json: navy #122A5C, teal #1F9E96) 반영.
+   변수 이름은 기존 그대로 유지해 아래 모든 규칙을 수정하지 않고 팔레트만 교체한다. */
 :root {
-  --primary: #2563eb;
-  --primary-dark: #1d4ed8;
-  --accent: #06b6d4;
-  --ink: #0f172a;
+  --primary: #122a5c;
+  --primary-dark: #0b1a3d;
+  --accent: #1f9e96;
+  --ink: #16213d;
   --body-text: #334155;
-  --muted: #64748b;
-  --faint: #94a3b8;
-  --line: #e2e8f0;
+  --muted: #5b6478;
+  --faint: #8a93a6;
+  --line: #e1e7ef;
   --paper: #ffffff;
-  --paper-2: #f8fafc;
-  --card-shadow: 0 1px 2px rgba(15, 23, 42, 0.04), 0 12px 32px rgba(15, 23, 42, 0.06);
+  --paper-2: #f4f6fa;
+  --card-shadow: 0 20px 60px -30px rgba(18, 42, 92, 0.25);
   --mono: "JetBrains Mono", monospace;
-  --sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --sans: "Noto Sans KR", -apple-system, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
 }
 
 * {
@@ -507,13 +509,9 @@ h2 {
   box-shadow: var(--card-shadow);
 }
 
-.trigger-index {
+.trigger-icon {
   display: block;
-  font-family: var(--mono);
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--line);
-  letter-spacing: 0.04em;
+  margin-bottom: 4px;
 }
 
 .trigger-card p {
