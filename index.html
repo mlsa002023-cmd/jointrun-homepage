@@ -32,12 +32,10 @@
         <span>JOINTRUN</span>
       </a>
       <nav>
-        <a href="#why">왜 JOINTRUN</a>
-        <a href="#how">작동 방식</a>
-        <a href="#value">4주 변화 확인</a>
-        <a href="#trust">신뢰 원칙</a>
-        <a href="#price">가격</a>
-        <a href="#faq">FAQ</a>
+        <a href="#why">왜 필요한가요</a>
+        <a href="#how">이렇게 기록해요</a>
+        <a href="#price">요금</a>
+        <a href="#faq">자주 묻는 질문</a>
       </nav>
       <a class="header-cta" href="https://jointrun-app.vercel.app/" target="_blank" rel="noreferrer">첫 기준선 만들기</a>
     </header>
@@ -51,8 +49,8 @@
           </p>
           <h1>선택의 순간을 잇는,<br />관절 건강의 내비게이션</h1>
           <p class="hero-lead">
-            손가락이 전과 다른 것 같을 때, 오늘의 상태와 증상을 기록하세요. 2주·4주 뒤 같은 조건으로
-            다시 확인하고, 과거의 나와 비교해 다음 관리 선택의 근거를 만듭니다.
+            손가락 상태와 증상 변화를 가이드 촬영으로 기록하고, 2주·4주 뒤 과거의 나와 비교해 다음
+            행동의 근거를 만듭니다.
           </p>
           <div class="hero-actions" aria-label="주요 행동">
             <a class="button primary" href="https://jointrun-app.vercel.app/" target="_blank" rel="noreferrer">
@@ -61,53 +59,68 @@
             <a class="button text-link" href="#apply">4주 파일럿 참여하기</a>
           </div>
           <p class="hero-trust-note">
-            JOINTRUN은 질환을 진단하거나 악화를 예측하지 않습니다. 동일 조건의 기록과 사용자가 느낀
-            증상을 연결하는 건강관리 참고 서비스입니다.
+            의학적 진단이나 치료를 대신하지 않습니다. 기록을 돕는 서비스입니다.
           </p>
         </div>
 
-        <div class="hero-visual reveal" aria-label="기준선부터 4주 비교까지 이어지는 기록 타임라인 예시">
+        <div class="hero-visual reveal" aria-label="기준선 대비 재확인 진행 상황 예시">
           <div class="phone">
-            <p class="phone-date">TODAY · 첫 기록</p>
-            <div class="phone-timeline">
-              <div class="phone-timeline-item is-active">
-                <span class="phone-timeline-dot" aria-hidden="true"></span>
-                <div>
-                  <p class="phone-timeline-label">오늘 · 첫 기준선</p>
-                  <p class="phone-timeline-desc">상태·증상 기록 완료</p>
-                </div>
+            <p class="phone-date">오늘 · 기준선 대비 재확인</p>
+            <div class="recheck-slider" role="img" aria-label="기준선 7월 1일부터 오늘 7월 23일까지 재확인 진행 슬라이더">
+              <div class="recheck-slider-track">
+                <span class="recheck-slider-fill"></span>
+                <span class="recheck-slider-dot is-done" style="left: 0%"></span>
+                <span class="recheck-slider-dot is-done" style="left: 50%"></span>
+                <span class="recheck-slider-dot is-current" style="left: 100%"></span>
               </div>
-              <div class="phone-timeline-item">
-                <span class="phone-timeline-dot" aria-hidden="true"></span>
-                <div>
-                  <p class="phone-timeline-label">2주 뒤 · 재확인</p>
-                  <p class="phone-timeline-desc">같은 조건으로 다시 기록</p>
-                </div>
-              </div>
-              <div class="phone-timeline-item">
-                <span class="phone-timeline-dot" aria-hidden="true"></span>
-                <div>
-                  <p class="phone-timeline-label">4주 뒤 · 비교</p>
-                  <p class="phone-timeline-desc">과거의 나와 나란히 비교</p>
-                </div>
-              </div>
-              <div class="phone-timeline-item">
-                <span class="phone-timeline-dot" aria-hidden="true"></span>
-                <div>
-                  <p class="phone-timeline-label">선택·결과 기록</p>
-                  <p class="phone-timeline-desc">Decision Log에 남기기</p>
-                </div>
+              <div class="recheck-slider-labels">
+                <span>기준선 · 7/1</span>
+                <span>2주 · 7/15</span>
+                <span>오늘 · 7/23</span>
               </div>
             </div>
-            <p class="phone-disclaimer">
-              JOINTRUN은 의학적 진단이나 치료를 대신하지 않으며, 관리 기록을 돕는 서비스입니다.
-            </p>
+            <div class="phone-feel-card">
+              <p class="phone-feel-title">체감 변화 기록</p>
+              <p class="phone-feel-body">아침 뻣뻣함이 <strong>&ldquo;덜함&rdquo;</strong>으로 기록됨</p>
+              <p class="phone-feel-note">진단이 아닌 사용자 보고 기반 기록입니다.</p>
+            </div>
           </div>
         </div>
       </section>
 
       <section id="why" class="section why-section">
         <div class="section-heading reveal">
+          <p class="eyebrow">WHEN TO RECORD</p>
+          <h2>오늘 왜 기록하려고 하나요?</h2>
+          <p class="section-lead">매일이 아니라, 판단이 필요한 다섯 순간에 기록합니다.</p>
+        </div>
+        <div class="trigger-grid">
+          <article class="trigger-card reveal">
+            <img class="trigger-icon" src="./assets/icons/trigger-pain.svg" alt="" width="28" height="28" />
+            <p>통증·뻣뻣함 증가</p>
+          </article>
+          <article class="trigger-card reveal">
+            <img class="trigger-icon" src="./assets/icons/trigger-deformity.svg" alt="" width="28" height="28" />
+            <p>변형된 것 같은 느낌</p>
+          </article>
+          <article class="trigger-card reveal">
+            <img class="trigger-icon" src="./assets/icons/trigger-function.svg" alt="" width="28" height="28" />
+            <p>손 기능 저하</p>
+          </article>
+          <article class="trigger-card reveal">
+            <img class="trigger-icon" src="./assets/icons/trigger-swelling.svg" alt="" width="28" height="28" />
+            <p>붓기·열감</p>
+          </article>
+          <article class="trigger-card reveal">
+            <img class="trigger-icon" src="./assets/icons/trigger-treatment.svg" alt="" width="28" height="28" />
+            <p>치료·제품 시작 후</p>
+          </article>
+        </div>
+        <p class="trigger-note reveal">
+          열감과 붓기는 카메라가 진단하는 값이 아니라 사용자가 느낀 증상으로 기록합니다.
+        </p>
+
+        <div class="section-heading reveal" style="margin-top: 64px">
           <p class="eyebrow">WHY JOINTRUN</p>
           <h2>관리 방법은 많지만, 내게 맞았는지<br />판단할 기록은 없습니다.</h2>
           <p class="section-lead">
@@ -119,68 +132,82 @@
         <p class="why-conclusion reveal">
           JOINTRUN은 기존 관리를 대체하지 않습니다. 선택 전후에 남는 기록의 공백을 연결합니다.
         </p>
-
-        <div class="section-heading reveal" style="margin-top: 88px">
-          <p class="eyebrow">판단이 필요한 순간</p>
-          <h2>매일이 아니라, 판단이 필요한<br />순간에 기록합니다.</h2>
-        </div>
-        <div class="trigger-grid">
-          <article class="trigger-card reveal">
-            <img class="trigger-icon" src="./assets/icons/trigger-pain.svg" alt="" width="28" height="28" />
-            <p>통증이나 뻣뻣함이<br />늘어난 것 같을 때</p>
-          </article>
-          <article class="trigger-card reveal">
-            <img class="trigger-icon" src="./assets/icons/trigger-deformity.svg" alt="" width="28" height="28" />
-            <p>손가락 모양이<br />전과 달라 보일 때</p>
-          </article>
-          <article class="trigger-card reveal">
-            <img class="trigger-icon" src="./assets/icons/trigger-function.svg" alt="" width="28" height="28" />
-            <p>물건을 잡거나<br />움직이기 불편할 때</p>
-          </article>
-          <article class="trigger-card reveal">
-            <img class="trigger-icon" src="./assets/icons/trigger-swelling.svg" alt="" width="28" height="28" />
-            <p>붓기나 열감을<br />느낄 때</p>
-          </article>
-          <article class="trigger-card reveal">
-            <img class="trigger-icon" src="./assets/icons/trigger-treatment.svg" alt="" width="28" height="28" />
-            <p>병원·운동·보호대·제품을<br />새로 시작했을 때</p>
-          </article>
-        </div>
-        <p class="trigger-note reveal">
-          열감과 붓기는 카메라가 진단하는 값이 아니라 사용자가 느낀 증상으로 기록합니다.
-        </p>
       </section>
 
       <section id="how" class="section how-section">
         <div class="section-heading center reveal">
-          <p class="eyebrow">HOW IT WORKS</p>
-          <h2>한 번의 순간을,<br />다음 판단까지 연결합니다.</h2>
+          <p class="eyebrow">EVENT-TO-RECHECK</p>
+          <h2>6단계로 이어지는 판단 흐름</h2>
         </div>
         <div class="steps">
           <article class="step reveal">
             <span class="step-index">01</span>
-            <p><strong>이유를 선택합니다.</strong> 오늘 왜 기록하려는지 선택합니다.</p>
+            <p><strong>기준선</strong>오늘 상태를 가이드 촬영으로 저장</p>
           </article>
           <article class="step reveal">
             <span class="step-index">02</span>
-            <p><strong>가이드에 맞춰 촬영하고 증상을 남깁니다.</strong> 손 위치·거리·조명·각도를 맞춰 비교 가능한 기록을 만듭니다.</p>
+            <p><strong>재확인</strong>2주·4주 뒤 같은 조건으로 재기록</p>
           </article>
           <article class="step reveal">
             <span class="step-index">03</span>
-            <p><strong>오늘을 첫 기준선으로 저장합니다.</strong> 첫날의 가치는 '오늘의 상태가 나의 기준선이 되었다'는 데 있습니다.</p>
+            <p><strong>비교</strong>과거의 나와 현재를 나란히</p>
           </article>
           <article class="step reveal">
             <span class="step-index">04</span>
-            <p><strong>2주·4주 뒤 같은 조건으로 다시 확인합니다.</strong> 당시 기록과 현재 기록을 나란히 봅니다.</p>
+            <p><strong>선택</strong>무엇을 선택했는지 기록</p>
           </article>
           <article class="step reveal">
             <span class="step-index">05</span>
-            <p><strong>선택과 결과를 연결합니다.</strong> 무엇을 선택했고, 그 뒤 어떻게 느꼈는지를 Decision Log에 남깁니다.</p>
+            <p><strong>결과</strong>이후 체감을 덜함/비슷함/더함으로</p>
           </article>
           <article class="step reveal">
             <span class="step-index">06</span>
-            <p><strong>다음 판단의 근거를 만듭니다.</strong> 기록이 쌓일수록 나만의 변화 타임라인이 완성됩니다.</p>
+            <p><strong>다음 판단</strong>쌓인 기록으로 다음 행동을 판단</p>
           </article>
+        </div>
+      </section>
+
+      <section id="decision-log-preview" class="section decision-preview-section">
+        <div class="section-heading reveal">
+          <p class="eyebrow">개인 기준선 · DECISION LOG</p>
+          <h2>좋아짐·나빠짐을 판정하지 않고,<br />관찰된 변화만 보여줍니다.</h2>
+        </div>
+        <div class="decision-preview-grid reveal">
+          <div class="decision-preview-compare">
+            <p class="compare-condition">촬영 조건 일치 ✓ 각도·거리·조명 동일</p>
+            <div class="compare-data-row">
+              <div class="compare-data-cell">
+                <p class="compare-data-label">기준선 · 7/1</p>
+                <p class="compare-data-value">통증 5 · 뻣뻣함 6</p>
+              </div>
+              <div class="compare-data-cell">
+                <p class="compare-data-label">오늘 · 7/23</p>
+                <p class="compare-data-value">통증 3 · 뻣뻣함 4</p>
+              </div>
+            </div>
+            <p class="compare-data-hint">원본 사진은 저장하지 않습니다 — 촬영 시점의 증상 체감값만 비교합니다.</p>
+            <p class="compare-question">아침 뻣뻣함이 어떤가요?</p>
+            <div class="compare-pill-row">
+              <span class="compare-pill is-active">덜함</span>
+              <span class="compare-pill">비슷함</span>
+              <span class="compare-pill">더함</span>
+              <span class="compare-pill">판단 어려움</span>
+            </div>
+          </div>
+          <div class="decision-preview-cards">
+            <div class="decision-preview-card">
+              <p class="decision-preview-tag">DAY 1</p>
+              <p>오늘의 상태가 나의 첫 기준선으로 저장됩니다.</p>
+            </div>
+            <div class="decision-preview-card">
+              <p class="decision-preview-tag">DECISION LOG</p>
+              <p>무엇을 선택했고, 이후 어떻게 느꼈는지 기록하세요.</p>
+            </div>
+            <div class="decision-preview-card is-note">
+              <p class="decision-preview-tag">주의</p>
+              <p>질환의 악화나 치료 효과를 판정하지 않습니다.</p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -236,8 +263,8 @@
 
       <section id="price" class="section price-section">
         <div class="section-heading center reveal">
-          <p class="eyebrow accent">가격</p>
-          <h2>먼저 한 번 비교해 보고,<br />필요할 때 오래 기록하세요.</h2>
+          <p class="eyebrow accent">PRICING</p>
+          <h2>기록·비교·이력 보존의 가치에<br />과금합니다.</h2>
         </div>
         <div class="pricing-grid">
           <article class="pricing-card reveal">
@@ -282,14 +309,13 @@
       <section id="trust" class="section trust-section">
         <div class="section-heading center reveal">
           <p class="eyebrow">신뢰 원칙</p>
-          <h2>보여주지 않는 것이<br />신뢰를 만듭니다.</h2>
+          <h2>하지 않는 주장이,<br />저희의 약속입니다.</h2>
         </div>
         <ul class="trust-list reveal">
-          <li>카메라로 염증·열감·질환 악화를 진단하지 않습니다.</li>
+          <li>카메라로 염증·열감·질환 악화를 진단하지 않습니다. 열감은 사용자가 느낀 증상으로 입력받습니다.</li>
           <li>변형 시점이나 악화 타이밍을 예측하지 않습니다.</li>
-          <li>치료·보조기·영양제의 효과를 확정하지 않습니다.</li>
-          <li>사용자가 동의한 최소한의 정보만 수집합니다.</li>
-          <li>기록은 사용자가 확인하고 삭제를 요청할 수 있어야 합니다.</li>
+          <li>치료·보조기·영양제의 인과적 효과를 확정하지 않고, 관찰된 변화만 제시합니다.</li>
+          <li>기록은 안전하게 보관되며, 동의 없이 제3자와 공유하지 않습니다.</li>
         </ul>
       </section>
 
@@ -299,9 +325,17 @@
           <h2>자주 묻는 질문</h2>
         </div>
         <div class="faq-list reveal">
+          <details class="faq-item" open>
+            <summary>병원 진료를 대신하나요?</summary>
+            <p>아니요. 진단·치료를 대신하지 않으며, 관리 판단을 돕는 기록 서비스입니다.</p>
+          </details>
           <details class="faq-item">
-            <summary>카메라로 질환을 진단하나요?</summary>
-            <p>아닙니다. 촬영 가이드는 손 위치와 촬영 조건을 맞추는 데 사용되며, 결과는 건강관리 참고용 기록입니다.</p>
+            <summary>2주·4주는 왜 필요한가요?</summary>
+            <p>같은 조건에서 재확인해야 기억이 아닌 기록으로 변화를 비교할 수 있습니다.</p>
+          </details>
+          <details class="faq-item">
+            <summary>기록은 어떻게 보호되나요?</summary>
+            <p>개인 기록은 본인만 열람하며, 동의 없이 판매·공유하지 않습니다.</p>
           </details>
           <details class="faq-item">
             <summary>붓기나 열감을 자동으로 알아내나요?</summary>
@@ -315,10 +349,19 @@
             <summary>매일 기록해야 하나요?</summary>
             <p>아닙니다. 통증·뻣뻣함 증가, 변형 우려, 기능 저하, 붓기·열감, 새로운 관리 시작처럼 판단이 필요한 순간에 기록합니다.</p>
           </details>
-          <details class="faq-item">
-            <summary>병원 진료를 대신하나요?</summary>
-            <p>아닙니다. 통증이나 변형이 지속되거나 심해지는 경우 의료진과 상담해야 합니다. JOINTRUN은 상담할 때 참고할 개인 기록을 만드는 서비스입니다.</p>
-          </details>
+        </div>
+      </section>
+
+      <section class="section pilot-band">
+        <div class="pilot-band-inner reveal">
+          <p class="eyebrow accent center">PILOT</p>
+          <h2>첫 30~50명의 기록이,<br />JOINTRUN의 기준선이 됩니다.</h2>
+          <p class="pilot-band-lead">파일럿 참여 또는 병원 PoC 파트너 문의</p>
+          <div class="pilot-band-actions">
+            <a class="button primary" href="https://jointrun-app.vercel.app/" target="_blank" rel="noreferrer">첫 기준선 무료로 만들기</a>
+            <a class="button text-link on-dark" href="#apply">4주 파일럿 참여하기</a>
+            <a class="button text-link on-dark" href="mailto:mlsa002023@gmail.com?subject=%5BJOINTRUN%5D%20%ED%8C%8C%ED%8A%B8%EB%84%88%20%EB%AC%B8%EC%9D%98">파트너 문의</a>
+          </div>
         </div>
       </section>
 
