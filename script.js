@@ -3,17 +3,25 @@ const NAVER_BAND_URL = "https://band.us/@jointrun";
 
 // ─────────────────────────────────────────────
 // 앱으로 보내는 CTA의 목적지. 홈페이지의 모든 앱 진입 버튼(data-app-link)이 이 값을 쓴다.
+// 멘토 배포용 QR도 같은 주소를 쓴다.
 //
-// 대표 검수(UAT) 때는 이 한 줄만 RC1 앱 Preview 주소로 바꾸면 헤더/히어로/가격/하단 고정
-// CTA가 한꺼번에 그쪽을 가리킨다. Vercel이 브랜치별로 만들어주는 고정 Preview 주소는
-//   https://jointrun-app-git-feat-v9-design-integration-<팀슬러그>.vercel.app
-// 형태이며, 정확한 값은 Vercel 대시보드 Deployments 탭에서 확인할 수 있다
-// (docs/uat-preview-setup-runbook.md 3번 참고 — 이 저장소에는 Vercel 접근 권한이 없어
-//  실제 주소를 여기에 미리 박아둘 수 없다).
+// 대표 검수(UAT)로 전환할 때는 APP_URL을 STAGING_APP_URL로 바꾸면 헤더/히어로/가격/하단
+// 고정 CTA가 한꺼번에 그쪽을 가리킨다. 되돌릴 때는 PRODUCTION_APP_URL로 되돌린다.
 //
-// 기본값은 기존에 동작하던 앱 주소를 그대로 유지한다 — 잘못 추측한 주소를 넣어 링크가
-// 깨지는 것보다 낫다.
-const APP_URL = "https://jointrun-app.vercel.app/";
+// 주의: 이 파일은 공개 홈페이지에 그대로 반영된다. STAGING으로 바꾸면 홈페이지를 방문한
+// 모든 사람이 검수용 Staging 앱(운영과 분리된 별도 Firebase 프로젝트)으로 들어간다.
+// UAT 기간에만 의도적으로 전환하고, 끝나면 반드시 운영 주소로 되돌린다.
+
+// 운영 앱 (평상시 기본값)
+const PRODUCTION_APP_URL = "https://jointrun-app.vercel.app/";
+
+// JOINTRUN Staging 공식 UAT 주소 (RC1.2.2에서 확정).
+// 반드시 firebaseapp.com을 쓴다 — 앱과 Firebase 인증 도우미(/__/auth/*)가 같은 출처여야
+// Safari에서 Google 로그인 결과가 앱으로 정상 복귀한다.
+// jointrun-staging.web.app은 같은 사이트를 가리키는 보조 주소일 뿐이므로 QR·CTA에 쓰지 않는다.
+const STAGING_APP_URL = "https://jointrun-staging.firebaseapp.com/";
+
+const APP_URL = PRODUCTION_APP_URL;
 
 document.querySelectorAll("[data-app-link]").forEach((link) => {
   link.href = APP_URL;
